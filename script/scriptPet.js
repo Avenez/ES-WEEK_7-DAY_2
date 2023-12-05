@@ -43,10 +43,20 @@ window.onload = () => {
   dogForm[0].addEventListener("submit", (e) => {
     e.preventDefault();
 
-    let petName = document.getElementById("name").value;
-    let ownerName = document.getElementById("ownerName").value;
-    let species = document.getElementById("species").value;
-    let breed = document.getElementById("breed").value;
+    let pName = document.getElementById("name");
+    let oName = document.getElementById("ownerName");
+    let s = document.getElementById("species");
+    let b = document.getElementById("breed");
+
+    let petName = pName.value;
+    let ownerName = oName.value;
+    let species = s.value;
+    let breed = b.value;
+
+    pName.value = "";
+    oName.value = "";
+    s.value = "";
+    b.value = "";
 
     createPet(petName, ownerName, species, breed);
   });
