@@ -6,8 +6,7 @@ class Pet {
     this.breed = breed;
   }
 
-  pet(otherPet) {
-    // condizione ? espressione da eseguire se condizione vera : espressione da eseguire se condizione falsa;
+  petCheck(otherPet) {
     return otherPet.ownerName === this.ownerName ? true : false;
   }
 }
@@ -52,3 +51,10 @@ window.onload = () => {
     createPet(petName, ownerName, species, breed);
   });
 };
+
+let pet1 = new Pet("Julius", "Marco", "Cane", "Lab");
+let pet2 = new Pet("Conrad", "Marco", "Cane", "Corg");
+console.log(pet1);
+console.log(pet2);
+
+console.log(pet1.petCheck(pet2));
