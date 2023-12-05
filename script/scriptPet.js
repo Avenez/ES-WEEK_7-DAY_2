@@ -16,8 +16,7 @@ let pets = [];
 const createPet = function (pName, oName, s, b) {
   let listCards = document.getElementById("listCards");
   let card = document.createElement("div");
-  card.classList.add("card");
-  card.classList.add("me-2");
+  card.classList.add("card", "me-2", "mb-2");
 
   let cardContent = `                
     <div class="card-body">
